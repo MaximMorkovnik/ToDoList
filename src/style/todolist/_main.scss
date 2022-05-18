@@ -1,0 +1,21 @@
+@import '../mixins';
+
+.body-to-do-list {
+    @include container-color(var(--light-blue)); // background color
+    @include container(1366px, 100vh);
+    @include padding(0, 0, 50px, 0);
+
+    .name {
+        @include title(bold, 28px, 33px, #C9F5FF, center);
+        @include padding(51px, 0, 66px, 0);
+    }    
+}
+
+.todolist {
+    @include container(1140px, 566px);
+    @include container-color(var(--white));
+    @include flex-container-column(flex-start, stretch);
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(185, 185, 185, 0.4);
+}

@@ -1,0 +1,163 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --grey: #C5C3C3;
+    --light-green: #dbf1c7;
+    --green: #88AC08;
+    --light-red: #c4b5b7;
+    --red: #a83e30;
+    --light-blue: #acc8da;
+    --blue: #0864a1;
+    --yellow: #F1AE00;
+    --light-grey-background: #f7f7f7ec;
+    --header: #221F1F;
+    --footer: #575757;
+    --font: 'Montserrat', sans-serif;
+}
+
+/* container */
+
+@mixin container($horisontal, $vertical) {
+    max-width: $horisontal;
+    min-height: $vertical;
+    margin: 0 auto;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left; 
+}          
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left; 
+}
+
+@mixin padding-left($left) {
+    padding-left: $left; 
+}
+
+/* flex-items */
+
+@mixin inline-flex($horisontal, $vertical) {
+    display: flex;
+    justify-content: $horisontal;
+    align-items: $vertical;
+}
+
+@mixin flex-container($horisontal, $vertical) {
+    display: flex;
+    justify-content: $horisontal;
+    align-items: $vertical;
+}
+
+@mixin flex-container-column($horisontal, $vertical) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $horisontal;
+    align-items: $vertical;
+}
+
+@mixin container-color($color) {
+    background-color: $color;
+}
+
+/* position */
+
+@mixin position-top-right($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+/* content */
+
+@mixin title($weight, $size, $height, $color, $align) {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+    text-align: $align;
+    text-transform: uppercase;
+}
+
+@mixin result($color, $bg-color) {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;  
+    color: $color;
+    background-color: $bg-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+@mixin filter {
+    width: 1025px;
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 54px;
+    color: var(--black);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid var(--light-green);
+}
+
+@mixin content-text {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--black);
+}
+
+@mixin footer-button($f-size, $l-height, $color) {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: $f-size;
+    line-height: $l-height;
+    color: $color;
+}
+
+@mixin button-task {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: var(--white);
+}
+
+@mixin circle($b-color) {
+    content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        // border: 1px solid #4764C9;
+        border-radius: 50%;
+        margin-right: 0.5em;
+        background-color: $b-color;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+}

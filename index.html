@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo-list</title>
+    <link rel="stylesheet" href="./public/styles/index.css">
+</head>
+
+<body class="body-to-do-list">
+    <h1 class="name">My Todo-list</h1>
+    <section class="todolist">
+        <header class="todolist__header">
+            <h2 class="todolist__title">Todo-list</h2>
+            <img class="todolist__logo" src="./public/images/logo.png" alt="logo">
+        </header>
+        <main class="todolist__main">
+            <div class="results">
+                <span id="stats-total" class="results__items results__items_violet">Total: <span>0</span></span>
+                <span id="stats-completed" class="results__items results__items_lime">Success: <span>0</span></span>
+                <span id="stats-pending" class="results__items results__items_pink">Pending: <span>0</span></span>
+            </div>
+            <form class="form" action="" method="get">
+                <input class="form__search" placeholder="Search" type="search" name="search" id="search">
+
+                <div class="content__title">
+                    <div class="content__text--title">Name task</div>
+                    <div class="content__item--title">
+                        <div class="content__priority--title">Priority</div>
+                        <div class="content__deadline content__deadline--title">Deadline</div>
+                        <div class="checkbox"></div>
+                        <a class="content__link" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="content" id="tasks-list">
+
+                </div>
+
+            </form>
+        </main>
+        <footer class="footer">
+            <div class="footer__button footer__button_left">
+                <a class="footer__link-clear-all" id="clear" href="#">
+                    Clear All
+                    <img class="footer__trash" src="./public/images/garbage.svg" alt="trash">
+                </a>
+            </div>
+            <div class="footer__button footer__button_right">
+                <a class="footer__link-add-new" id="new-task" href="#">Add new task</a>
+            </div>
+        </footer>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="body-task">
+            <form class="task" action="#" id="new-task-form">
+                <h1 class="task__title">Add New Task</h1>
+                <div class="task__block">
+                    <div class="task__item">
+                        <label class="task__label">
+                            <img class="task__icon" src="./public/images/star1.svg" alt="star">
+                            Title
+                            <input type="text" name="title" placeholder="Type something" required>
+                        </label>
+                    </div>
+                    <div class="task__item">
+                        <label class="task__label">
+                            <img class="task__icon" src="./public/images/star1.svg" alt="star">
+                            Deadline
+                            <input type="date" name="date" placeholder="0000-0-00" required>
+                        </label>
+                    </div>
+                    <div class="task__item">
+                        <label class="task__label">
+                            <img class="task__icon" src="./public/images/star1.svg" alt="star">
+                            Priority
+                            <select name="priority" required>
+                                <option value="0" disabled selected>Choose</option>
+                                <option value="LOW">Low Priority</option>
+                                <option value="MEDIUM">Medium Priority</option>
+                                <option value="HIGH">High Priority</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="task__wrapper">
+                        <button class="task__button">ADD TASK</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script/todo.js"></script>
+    <script src="./script/index.js"></script>
+</body>
+
+</html>

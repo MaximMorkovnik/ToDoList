@@ -1,0 +1,29 @@
+// @import url('href="https://fonts.googleapis.com');
+// @import url('href="https://fonts.gstatic.com" crossorigin');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,500;1,700&display=swap" rel="stylesheet');
+
+
+@font-face {
+    font-family:'Montserrat';
+    src: url('../../public/fonts/Montserrat/Montserrat-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family:'Montserrat';
+    src: url('../../public/fonts/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family:'Montserrat';
+    src: url('../../public/fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}

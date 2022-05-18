@@ -1,0 +1,21 @@
+@import '../mixins';
+
+.form {
+    // @include padding(0, 30px, 0, 30px);
+
+    &__search {
+        @include filter;
+        width: 100%;
+        
+        &:hover, &:focus, &:active {
+            border-bottom: 2px solid var(--green);
+            outline: none;
+        }
+
+        &::placeholder {
+            color: var(--grey);
+        }
+    }
+}
+
+@import '../todolist/content';

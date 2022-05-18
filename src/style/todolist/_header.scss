@@ -1,0 +1,23 @@
+@import '../mixins';
+
+.todolist {
+    padding: 30px;
+
+    &__header {
+        flex: 0 0 auto;
+        @include flex-container(space-between, center);
+        @include padding(27px, 40px, 34px, 40px);
+        background-color: var(--light-grey-background);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    &__title {
+        @include title(500, 28px, 42px, #505558, left);
+    }
+    
+    &__logo {
+        @include size(50px, 50px);
+        border-radius: 50%;
+    }
+}

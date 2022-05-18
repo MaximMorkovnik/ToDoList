@@ -1,0 +1,23 @@
+@import '../mixins';
+
+.footer {
+    flex: 0 0 auto;
+    @include flex-container(space-between, center);
+    @include padding(14px, 40px, 14px, 40px);
+    background-color: var(--light-grey-background);
+    border-radius: 20px;
+
+    &__link-clear-all {
+        @include footer-button(20px, 36px, var(--green));
+    }
+
+    &__trash {
+        @include padding(0, 0, 0, 8px);
+        width: 25px;
+    }
+
+    &__link-add-new {
+        @include footer-button(20px, 36px, var(--green));
+
+    }
+}

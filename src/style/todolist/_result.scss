@@ -1,0 +1,29 @@
+@import '../mixins';
+
+.results {
+    @include flex-container(space-between, center);
+    @include padding(0, 40px, 0, 40px);
+    background-color: var(--light-grey-background);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 30px;
+
+    &__items {
+        padding: 5px;
+        min-width: 150px;
+        display: flex;
+        justify-content: center;
+
+        &_violet {
+            @include result(var(--blue), var(--light-blue));
+        }
+
+        &_lime {
+            @include result(var(--green), var(--light-green));
+        }
+
+        &_pink {
+            @include result(var(--red), var(--light-red));
+        }
+    }
+}
